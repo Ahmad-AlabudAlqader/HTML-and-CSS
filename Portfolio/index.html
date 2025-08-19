@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad-AlabudAlqader Portfolio</title>
+<style>
+
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    display: block;
+    margin: 120px auto 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(30%) brightness(1.1);
+}
+
+/* Text over Image */
+.home-section {
+    position: relative;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    margin: 2rem;
+    gap: 20px;
+}
+
+.column {
+    width: 50%;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    height: 200px;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* Hover Effect on Paragraph */
+.hover-paragraph {
+    text-align: center;
+    margin: 2rem;
+    transition: color 0.3s;
+}
+
+.hover-paragraph:hover {
+    color: #fc466b;
+}
+
+/* Image Overlay Fade */
+.overlay-container {
+    position: relative;
+    width: 300px;
+    margin: 2rem auto;
+}
+
+.overlay-container img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+}
+
+.overlay-container:hover .overlay-text {
+    opacity: 1;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-colo
+
+</style>
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#video">Video</a>
+    </nav>
+
+    <!-- Home Section with Image and Text Overlay -->
+    <section id="home" class="home-section">
+        <img src="https://cdn.pixabay.com/photo/2024/12/03/08/08/ai-generated-9241538_1280.jpg" alt="Ahmad" class="profile-img">
+        <div class="text-overlay">Hi, I'm Ahmad AlabudAlqader</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="hover-paragraph">I am a student passionate about coding, design, and building cool things on the web. I'm loving experimenting with HTML and CSS!</p>
+    </section>
+
+    <!-- Two Column Layout -->
+    <section class="two-column">
+        <div class="column left">
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript (to do)</li>
+            </ul>
+        </div>
+        <div class="column right">
+            <h3>Education</h3>
+            <p>Currently studying.</p>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <section id="projects">
+        <h2>Projects Table</h2>
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Bootstrap Website</td>
+                <td>A simple responsive movie site</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>Portfolio</td>
+                <td>This personal portfolio</td>
+                <td>2025</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Image with Hover Fade Overlay -->
+    <section class="overlay-container">
+        <img src="https://cdn.pixabay.com/photo/2024/12/03/08/08/ai-generated-9241538_1280.jpg" alt="Overlay Example">
+        <div class="overlay-text">This is a hover overlay</div>
+    </section>
+
+    <!-- Video Section with Text Overlay -->
+    <section id="video" class="video-section">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2015/08/08/120-135736520_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">My Projects in Motion</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ahmad AlabudAlqader | All rights reserved</p>
+    </footer>
+
+</body>
+</html>
